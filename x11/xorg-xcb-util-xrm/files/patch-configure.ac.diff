@@ -1,0 +1,11 @@
+--- configure.ac.orig	2018-08-20 10:30:17.000000000 -0600
++++ configure.ac	2018-08-20 10:30:27.000000000 -0600
+@@ -11,6 +11,7 @@ AC_USE_SYSTEM_EXTENSIONS
+ 
+ AM_INIT_AUTOMAKE([foreign dist-bzip2 subdir-objects])
+ AM_MAINTAINER_MODE
++LT_INIT
+ 
+ XCB_UTIL_M4_WITH_INCLUDE_PATH
+ XCB_UTIL_COMMON([1.4], [1.6])
+ 

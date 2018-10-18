@@ -1,0 +1,38 @@
+--- awesomerc.lua.orig	2015-09-19 23:45:57.000000000 -0700
++++ awesomerc.lua	2015-09-19 23:46:17.000000000 -0700
+@@ -400,7 +400,7 @@ clientkeys = gears.table.join(
+ for i = 1, 9 do
+     globalkeys = gears.table.join(globalkeys,
+         -- View tag only.
+-        awful.key({ modkey }, "#" .. i + 9,
++        awful.key({ modkey }, "" .. i + 9,
+                   function ()
+                         local screen = awful.screen.focused()
+                         local tag = screen.tags[i]
+@@ -410,7 +410,7 @@ for i = 1, 9 do
+                   end,
+                   {description = "view tag #"..i, group = "tag"}),
+         -- Toggle tag display.
+-        awful.key({ modkey, "Control" }, "#" .. i + 9,
++        awful.key({ modkey, "Control" }, "" .. i + 9,
+                   function ()
+                       local screen = awful.screen.focused()
+                       local tag = screen.tags[i]
+@@ -420,7 +420,7 @@ for i = 1, 9 do
+                   end,
+                   {description = "toggle tag #" .. i, group = "tag"}),
+         -- Move client to tag.
+-        awful.key({ modkey, "Shift" }, "#" .. i + 9,
++        awful.key({ modkey, "Shift" }, "" .. i + 9,
+                   function ()
+                       if client.focus then
+                           local tag = client.focus.screen.tags[i]
+@@ -431,7 +431,7 @@ for i = 1, 9 do
+                   end,
+                   {description = "move focused client to tag #"..i, group = "tag"}),
+         -- Toggle tag on focused client.
+-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
++        awful.key({ modkey, "Control", "Shift" }, "" .. i + 9,
+                   function ()
+                       if client.focus then
+                           local tag = client.focus.screen.tags[i]
